@@ -1,0 +1,2523 @@
+!SESSION 2025-12-17 15:49:13.769 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2025-12-17 15:50:12.588
+!MESSAGE Recreating part support. No part support available.
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-12-17 15:50:20.998
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\asyou'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2025-12-17 15:50:21.938
+!MESSAGE The device 'MCXN947' (version='1.0.0') from SDK 'SDK_2.x_FRDM-MCXN947' (version='25.09.00', build='epluginsite815 2025-09-22') will be installed.
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-12-17 15:50:55.609
+!MESSAGE Indexed 'nxpcup' (35 sources, 140 headers) in 5.66 sec: 16,838 declarations; 43,044 references; 14 unresolved inclusions; 203 syntax errors; 5,279 unresolved names (8.1%)
+
+!ENTRY com.crt.log 1 0 2025-12-17 15:54:26.552
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2025-12-17 15:54:27.582
+!MESSAGE RedlinkServer telnet session connected on port 3025->63395 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2025-12-17 15:54:59.153
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=55322, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-17 15:55:01.881
+!MESSAGE Telnet session connected on port 3330->55335 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.launch 4 150 2025-12-17 15:55:39.708
+!MESSAGE Error starting process.
+!STACK 0
+java.io.IOException: Cannot run program "C:\Users\asyou\Desktop\Tmp\nxpcup\Debug\nxpcup.axf": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:450)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:147)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:134)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory$Builder.start(ProcessFactory.java:273)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:366)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.exec(LocalRunLaunchDelegate.java:285)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.runLocalApplication(LocalRunLaunchDelegate.java:110)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.launch(LocalRunLaunchDelegate.java:78)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.launch 4 150 2025-12-17 15:55:39.708
+!MESSAGE Cannot run program "C:\Users\asyou\Desktop\Tmp\nxpcup\Debug\nxpcup.axf": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "C:\Users\asyou\Desktop\Tmp\nxpcup\Debug\nxpcup.axf": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:450)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:147)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:134)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory$Builder.start(ProcessFactory.java:273)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:366)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.exec(LocalRunLaunchDelegate.java:285)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.runLocalApplication(LocalRunLaunchDelegate.java:110)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.launch(LocalRunLaunchDelegate.java:78)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.crt.log 1 0 2025-12-17 15:56:15.405
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2025-12-17 15:56:16.427
+!MESSAGE RedlinkServer telnet session connected on port 3025->61643 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2025-12-17 15:56:17.535
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=61644, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-17 15:56:20.070
+!MESSAGE Telnet session connected on port 3330->61656 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.launch 4 150 2025-12-17 15:56:37.563
+!MESSAGE Error starting process.
+!STACK 0
+java.io.IOException: Cannot run program "C:\Users\asyou\Desktop\Tmp\nxpcup\Debug\nxpcup.axf": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:450)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:147)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:134)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory$Builder.start(ProcessFactory.java:273)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:366)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.exec(LocalRunLaunchDelegate.java:285)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.runLocalApplication(LocalRunLaunchDelegate.java:110)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.launch(LocalRunLaunchDelegate.java:78)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.launch 4 150 2025-12-17 15:56:37.564
+!MESSAGE Cannot run program "C:\Users\asyou\Desktop\Tmp\nxpcup\Debug\nxpcup.axf": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "C:\Users\asyou\Desktop\Tmp\nxpcup\Debug\nxpcup.axf": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:450)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:147)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:134)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory$Builder.start(ProcessFactory.java:273)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:366)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.exec(LocalRunLaunchDelegate.java:285)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.runLocalApplication(LocalRunLaunchDelegate.java:110)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.launch(LocalRunLaunchDelegate.java:78)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.crt.log 1 0 2025-12-17 15:57:40.241
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2025-12-17 15:57:41.253
+!MESSAGE RedlinkServer telnet session connected on port 3025->61664 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2025-12-17 15:57:42.497
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=61665, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-17 15:57:45.030
+!MESSAGE Telnet session connected on port 3330->61678 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2025-12-17 16:16:11.635
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2025-12-17 16:16:12.646
+!MESSAGE RedlinkServer telnet session connected on port 3025->50195 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2025-12-17 16:16:20.062
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=50196, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-17 16:16:22.583
+!MESSAGE Telnet session connected on port 3330->50208 @ 127.0.0.1
+!SESSION 2026-01-10 23:02:45.384 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-01-10 23:02:54.209
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-01-10 23:03:31.316
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\asyou'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.cdt.launch 4 150 2026-01-11 12:44:46.245
+!MESSAGE Error starting process.
+!STACK 0
+java.io.IOException: Cannot run program "C:\Users\asyou\Desktop\Tmp\nxpcup\Debug\nxpcup.axf": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:450)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:147)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:134)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory$Builder.start(ProcessFactory.java:273)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:366)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.exec(LocalRunLaunchDelegate.java:285)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.runLocalApplication(LocalRunLaunchDelegate.java:110)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.launch(LocalRunLaunchDelegate.java:78)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.launch 4 150 2026-01-11 12:44:46.245
+!MESSAGE Cannot run program "C:\Users\asyou\Desktop\Tmp\nxpcup\Debug\nxpcup.axf": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "C:\Users\asyou\Desktop\Tmp\nxpcup\Debug\nxpcup.axf": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:450)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:147)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:134)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory$Builder.start(ProcessFactory.java:273)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:366)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.exec(LocalRunLaunchDelegate.java:285)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.runLocalApplication(LocalRunLaunchDelegate.java:110)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.launch(LocalRunLaunchDelegate.java:78)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.crt.log 1 0 2026-01-11 12:45:00.172
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-01-11 12:45:01.195
+!MESSAGE RedlinkServer telnet session connected on port 3025->64072 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-01-11 12:45:06.017
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=64073, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-01-11 12:45:08.783
+!MESSAGE Telnet session connected on port 3330->64086 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-01-11 12:46:18.667
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-01-11 12:46:19.685
+!MESSAGE RedlinkServer telnet session connected on port 3025->61759 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-01-11 12:46:22.333
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=61760, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-01-11 12:46:24.675
+!MESSAGE Telnet session connected on port 3330->61771 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-01-11 12:49:20.976
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-01-11 12:49:21.983
+!MESSAGE RedlinkServer telnet session connected on port 3025->57861 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-01-11 12:49:31.893
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=57862, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-01-11 12:49:34.450
+!MESSAGE Telnet session connected on port 3330->57874 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-01-11 12:55:32.314
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-01-11 12:55:32.315
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-01-11 12:55:32.315
+!MESSAGE Hardware Transfer Error
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-01-11 12:55:32.315
+!MESSAGE 15: Target error from Register access
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-01-11 12:55:32.315
+!MESSAGE Debugging context: nxpcup LinkServer Debug
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-01-11 12:55:37.895
+!MESSAGE Request for monitor: '&"Could not read registers; remote failure reply '22'\n"
+148^error,msg="Could not read registers; remote failure reply '22'"' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2026-01-11 12:55:37.895
+!MESSAGE Failed to execute MI command:
+-thread-info
+Error message from debugger back end:
+Could not read registers; remote failure reply '22'
+!STACK 0
+java.lang.Exception: Could not read registers; remote failure reply '22'
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-01-11 12:55:38.195
+!MESSAGE 15: Target error from Register access: Ee(A5). Wire protocol for probe is not initialized
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-01-11 12:55:38.195
+!MESSAGE 15: Target error from Register access: Ee(A5). Wire protocol for probe is not initialized
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-01-11 12:55:38.195
+!MESSAGE Debugging context: nxpcup LinkServer Debug
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-01-11 12:55:40.269
+!MESSAGE Request for monitor: '149^error,msg="Could not read registers; remote failure reply '22'"' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2026-01-11 12:55:40.269
+!MESSAGE Failed to execute MI command:
+-thread-info
+Error message from debugger back end:
+Could not read registers; remote failure reply '22'
+!STACK 0
+java.lang.Exception: Could not read registers; remote failure reply '22'
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-01-11 12:55:40.520
+!MESSAGE 15: Target error from Register access: Ee(A5). Wire protocol for probe is not initialized
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-01-11 12:55:40.520
+!MESSAGE 15: Target error from Register access: Ee(A5). Wire protocol for probe is not initialized
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-01-11 12:55:40.520
+!MESSAGE Debugging context: nxpcup LinkServer Debug
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-01-11 12:55:42.842
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$16@31f1a8da): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2026-01-11 12:55:42.842
+!MESSAGE Connection is shut down
+
+!ENTRY com.crt.log 1 0 2026-01-11 12:55:43.173
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-01-11 12:55:44.179
+!MESSAGE RedlinkServer telnet session connected on port 3025->57956 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-01-11 12:55:52.088
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@5b37cab0): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Suspend operation timeout.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2026-01-11 12:55:52.088
+!MESSAGE Suspend operation timeout.
+
+!ENTRY com.crt.log 1 0 2026-01-11 12:56:02.090
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-01-11 12:56:03.107
+!MESSAGE RedlinkServer telnet session connected on port 3025->57965 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-01-11 12:56:05.537
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=57966, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-01-11 12:56:08.039
+!MESSAGE Telnet session connected on port 3330->57978 @ 127.0.0.1
+!SESSION 2026-01-12 15:03:30.700 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-01-12 15:04:08.281
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\asyou'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2026-01-14 09:21:07.322 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-01-14 09:21:53.939
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\asyou'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.crt.log 1 0 2026-01-14 09:34:19.245
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-01-14 09:34:20.270
+!MESSAGE RedlinkServer telnet session connected on port 3025->56306 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-01-14 09:34:29.237
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=51600, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-01-14 09:34:32.026
+!MESSAGE Telnet session connected on port 3330->51616 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-01-14 09:35:55.633
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-01-14 09:35:56.643
+!MESSAGE RedlinkServer telnet session connected on port 3025->49938 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-01-14 09:36:00.135
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=49939, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-01-14 09:36:02.658
+!MESSAGE Telnet session connected on port 3330->49951 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-01-14 09:39:49.363
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-01-14 09:39:50.374
+!MESSAGE RedlinkServer telnet session connected on port 3025->61683 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-01-14 09:40:01.485
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=61684, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-01-14 09:40:04.014
+!MESSAGE Telnet session connected on port 3330->61696 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-01-14 09:44:35.300
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@5a62c17b): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@224ea1f3): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$5@540cbea9): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@224ea1f3): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3' resulted in a rejected execution exception.]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 0 2026-01-14 09:44:35.300
+!MESSAGE Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@224ea1f3): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2026-01-14 09:44:35.300
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$5@540cbea9): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #3 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@224ea1f3): Status OK: unknown code=0 OK' resulted in a rejected execution exception., step #3' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-01-14 09:44:35.301
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb.ui 4 0 2026-01-14 09:44:35.301
+!MESSAGE Service is not available.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2026-01-14 09:44:35.301
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.GdbDisconnectCommand$1@74e741e5): Status ERROR: org.eclipse.cdt.dsf.gdb.ui code=0 Service is not available.' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-01-14 09:44:35.302
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@2c6e6b0a): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-01-14 09:44:35.302
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@11abbac2): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY com.crt.log 1 0 2026-01-14 09:45:07.971
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=53924, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-01-14 09:45:10.278
+!MESSAGE Telnet session connected on port 3330->53935 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-01-14 09:49:27.263
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-01-14 09:49:28.272
+!MESSAGE RedlinkServer telnet session connected on port 3025->56612 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-01-14 09:49:32.587
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=56613, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-01-14 09:49:34.943
+!MESSAGE Telnet session connected on port 3330->56624 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-01-14 09:49:55.436
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@7eae5d59): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-interpreter-exec console kill
+Error message from debugger back end:
+Can't kill process java.lang.Exception: Can't kill process' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2026-01-14 09:49:55.436
+!MESSAGE Failed to execute MI command:
+-interpreter-exec console kill
+Error message from debugger back end:
+Can't kill process
+!STACK 0
+java.lang.Exception: Can't kill process
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.core.jobs 4 2 2026-01-14 09:51:04.071
+!MESSAGE An internal error occurred during: "UI refresh".
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1278)
+	at org.eclipse.swt.widgets.Display.getThread(Display.java:2590)
+	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper.runNowOrInJob(UIJobHelper.java:215)
+	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.cancelPrevJob(ValidationService.java:251)
+	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.runAction(ValidationService.java:226)
+	at com.nxp.swtools.common.utils.runtime.DelayedExecution$1.run(DelayedExecution.java:379)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2026-02-04 15:03:15.870 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-02-04 15:03:59.968
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\asyou'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.crt.log 1 0 2026-02-04 15:04:30.762
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-04 15:04:31.779
+!MESSAGE RedlinkServer telnet session connected on port 3025->53817 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-04 15:04:41.409
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=53818, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-04 15:04:44.290
+!MESSAGE Telnet session connected on port 3330->53831 @ 127.0.0.1
+!SESSION 2026-02-06 13:14:13.280 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-02-06 13:15:01.036
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\asyou'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.crt.log 1 0 2026-02-06 13:15:07.141
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-06 13:15:08.152
+!MESSAGE RedlinkServer telnet session connected on port 3025->61300 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-06 13:15:42.444
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=57039, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-06 13:15:45.225
+!MESSAGE Telnet session connected on port 3330->57052 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-02-06 13:30:31.525
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-02-06 13:30:31.526
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-02-06 13:30:31.526
+!MESSAGE Hardware Transfer Error
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-02-06 13:30:31.526
+!MESSAGE Debugging context: nxpcup LinkServer Debug
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-02-06 13:30:35.278
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@267f1f92): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-interrupt
+Error message from debugger back end:
+Stopping Thread 1 failed: T06thread:1; java.lang.Exception: Stopping Thread 1 failed: T06thread:1;' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2026-02-06 13:30:35.278
+!MESSAGE Failed to execute MI command:
+-exec-interrupt
+Error message from debugger back end:
+Stopping Thread 1 failed: T06thread:1;
+!STACK 0
+java.lang.Exception: Stopping Thread 1 failed: T06thread:1;
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-02-06 13:30:35.942
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$16@3b999423): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2026-02-06 13:30:35.942
+!MESSAGE Connection is shut down
+
+!ENTRY com.crt.log 1 0 2026-02-06 13:30:36.216
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-06 13:30:37.224
+!MESSAGE RedlinkServer telnet session connected on port 3025->65126 @ 127.0.0.1
+!SESSION 2026-02-06 13:31:26.897 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-02-06 13:31:44.681
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\asyou'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.crt.log 1 0 2026-02-06 13:31:59.722
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-06 13:32:00.740
+!MESSAGE RedlinkServer telnet session connected on port 3025->65147 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-06 13:32:10.203
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=65148, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-06 13:32:12.918
+!MESSAGE Telnet session connected on port 3330->65161 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-06 13:33:35.238
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-06 13:33:36.251
+!MESSAGE RedlinkServer telnet session connected on port 3025->65170 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-06 13:33:39.958
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=65171, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-06 13:33:42.696
+!MESSAGE Telnet session connected on port 3330->65184 @ 127.0.0.1
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-02-06 14:44:01.320
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$LookupJob
+!SESSION 2026-02-11 14:11:05.783 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-02-11 14:12:00.626
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\asyou'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.crt.log 1 0 2026-02-11 14:17:12.255
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 14:17:13.279
+!MESSAGE RedlinkServer telnet session connected on port 3025->50466 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 14:17:34.696
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 14:17:35.709
+!MESSAGE RedlinkServer telnet session connected on port 3025->50470 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 14:17:45.022
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=50471, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-11 14:17:47.661
+!MESSAGE Telnet session connected on port 3330->50482 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 14:44:08.840
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 14:44:09.854
+!MESSAGE RedlinkServer telnet session connected on port 3025->59980 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 14:44:13.492
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=59981, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-11 14:44:16.058
+!MESSAGE Telnet session connected on port 3330->59993 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 14:48:21.054
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 14:48:22.068
+!MESSAGE RedlinkServer telnet session connected on port 3025->60115 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 14:48:28.461
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=60116, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-11 14:48:31.027
+!MESSAGE Telnet session connected on port 3330->60128 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-02-11 14:49:02.843
+!MESSAGE 15: Target error from Register access
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-02-11 14:49:02.844
+!MESSAGE 15: Target error from Register access
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-02-11 14:49:02.844
+!MESSAGE Wire ACK Fault in DAP access
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-02-11 14:49:02.844
+!MESSAGE Debugging context: nxpcup LinkServer Debug
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-02-11 14:49:10.456
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$16@6e88d1a4): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2026-02-11 14:49:10.456
+!MESSAGE Connection is shut down
+
+!ENTRY com.crt.log 1 0 2026-02-11 14:49:10.774
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 14:49:11.788
+!MESSAGE RedlinkServer telnet session connected on port 3025->57152 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-02-11 14:49:19.592
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@7e5b1eae): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Suspend operation timeout.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2026-02-11 14:49:19.592
+!MESSAGE Suspend operation timeout.
+
+!ENTRY com.crt.log 1 0 2026-02-11 14:50:24.148
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 14:50:25.171
+!MESSAGE RedlinkServer telnet session connected on port 3025->57159 @ 127.0.0.1
+
+!ENTRY com.crt.log 4 -1 2026-02-11 14:50:37.817
+!MESSAGE Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+!STACK 0
+java.lang.Exception: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:267)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.connect(AbstractJtagDiscovery.java:212)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.discover(AbstractJtagDiscovery.java:157)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.TargetDiscovery.jtagDiscovery(TargetDiscovery.java:461)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.getEmulatorInfo(LaunchScriptUtils.java:257)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.init(LaunchScriptUtils.java:497)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:165)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:152)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.services.TargetDiscoveryService.getTargetDiscovery(TargetDiscoveryService.java:138)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.override.LSFinalLaunchSequence$TargetDiscoveryJob.run(LSFinalLaunchSequence.java:129)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.checkServerReply(RedlinkServerClient.java:229)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.executeScript(AbstractJtagDiscovery.java:295)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.doScript(AbstractJtagDiscovery.java:275)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:262)
+	... 10 more
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.core.debug.support.linkserver] 0 0 2026-02-11 14:50:53.105
+!MESSAGE 0x5, Wire Ack Fault - target connected?
+
+!ENTRY com.crt.log 1 0 2026-02-11 14:51:08.542
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 14:51:09.566
+!MESSAGE RedlinkServer telnet session connected on port 3025->57169 @ 127.0.0.1
+
+!ENTRY com.crt.log 4 -1 2026-02-11 14:51:20.536
+!MESSAGE Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+!STACK 0
+java.lang.Exception: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:267)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.connect(AbstractJtagDiscovery.java:212)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.discover(AbstractJtagDiscovery.java:157)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.TargetDiscovery.jtagDiscovery(TargetDiscovery.java:461)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.getEmulatorInfo(LaunchScriptUtils.java:257)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.init(LaunchScriptUtils.java:497)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:165)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:152)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.services.TargetDiscoveryService.getTargetDiscovery(TargetDiscoveryService.java:138)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.override.LSFinalLaunchSequence$TargetDiscoveryJob.run(LSFinalLaunchSequence.java:129)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.checkServerReply(RedlinkServerClient.java:229)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.executeScript(AbstractJtagDiscovery.java:295)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.doScript(AbstractJtagDiscovery.java:275)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:262)
+	... 10 more
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.core.debug.support.linkserver] 0 0 2026-02-11 14:51:35.854
+!MESSAGE 0x5, Wire Ack Fault - target connected?
+
+!ENTRY com.crt.log 1 0 2026-02-11 14:51:41.817
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 14:51:42.841
+!MESSAGE RedlinkServer telnet session connected on port 3025->57173 @ 127.0.0.1
+
+!ENTRY com.crt.log 4 -1 2026-02-11 14:51:53.659
+!MESSAGE Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+!STACK 0
+java.lang.Exception: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:267)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.connect(AbstractJtagDiscovery.java:212)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.discover(AbstractJtagDiscovery.java:157)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.TargetDiscovery.jtagDiscovery(TargetDiscovery.java:461)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.getEmulatorInfo(LaunchScriptUtils.java:257)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.init(LaunchScriptUtils.java:497)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:165)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:152)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.services.TargetDiscoveryService.getTargetDiscovery(TargetDiscoveryService.java:138)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.override.LSFinalLaunchSequence$TargetDiscoveryJob.run(LSFinalLaunchSequence.java:129)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 5A6A0148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.checkServerReply(RedlinkServerClient.java:229)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.executeScript(AbstractJtagDiscovery.java:295)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.doScript(AbstractJtagDiscovery.java:275)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:262)
+	... 10 more
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.core.debug.support.linkserver] 0 0 2026-02-11 14:51:56.163
+!MESSAGE 0x5, Wire Ack Fault - target connected?
+!SESSION 2026-02-11 14:52:11.332 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-02-11 14:52:29.850
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\asyou'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.crt.log 1 0 2026-02-11 14:52:42.646
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 14:52:43.662
+!MESSAGE RedlinkServer telnet session connected on port 3025->61891 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 14:52:54.440
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=61892, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-11 14:52:57.182
+!MESSAGE Telnet session connected on port 3330->61906 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 14:54:36.525
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 14:54:37.540
+!MESSAGE RedlinkServer telnet session connected on port 3025->63924 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 14:54:38.641
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=63925, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-11 14:54:41.194
+!MESSAGE Telnet session connected on port 3330->63936 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 14:56:45.652
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 14:56:46.675
+!MESSAGE RedlinkServer telnet session connected on port 3025->53500 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 14:56:50.103
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=53501, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-11 14:56:52.635
+!MESSAGE Telnet session connected on port 3330->53513 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 14:58:14.309
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 14:58:15.322
+!MESSAGE RedlinkServer telnet session connected on port 3025->53526 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 14:58:18.736
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=53527, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-11 14:58:21.326
+!MESSAGE Telnet session connected on port 3330->53539 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-02-11 14:58:43.720
+!MESSAGE 15: Target error from Register access
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-02-11 14:58:43.720
+!MESSAGE 15: Target error from Register access
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-02-11 14:58:43.720
+!MESSAGE Wire ACK Wait in DAP access
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2026-02-11 14:58:43.720
+!MESSAGE Debugging context: nxpcup LinkServer Debug
+
+!ENTRY com.crt.log 1 0 2026-02-11 15:04:03.620
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 15:04:04.633
+!MESSAGE RedlinkServer telnet session connected on port 3025->52207 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 15:04:07.857
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=52208, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-11 15:04:10.174
+!MESSAGE Telnet session connected on port 3330->52219 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 15:11:21.658
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 15:11:22.671
+!MESSAGE RedlinkServer telnet session connected on port 3025->50680 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.core.debug.support.linkserver] 0 0 2026-02-11 15:11:47.892
+!MESSAGE 0x301, No probes found
+
+!ENTRY com.crt.log 1 0 2026-02-11 15:11:52.207
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=49596, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-11 15:11:54.563
+!MESSAGE Telnet session connected on port 3330->49607 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 15:14:00.028
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 15:14:01.050
+!MESSAGE RedlinkServer telnet session connected on port 3025->61969 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 15:14:09.658
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=61970, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-11 15:14:12.183
+!MESSAGE Telnet session connected on port 3330->61982 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 15:14:53.726
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 15:14:54.744
+!MESSAGE RedlinkServer telnet session connected on port 3025->64630 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 15:19:43.928
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=57581, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-11 15:19:46.235
+!MESSAGE Telnet session connected on port 3330->57592 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 15:23:52.510
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 15:23:53.534
+!MESSAGE RedlinkServer telnet session connected on port 3025->63330 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 15:24:23.824
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=59476, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-11 15:24:26.118
+!MESSAGE Telnet session connected on port 3330->59487 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 15:32:41.212
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 15:32:42.225
+!MESSAGE RedlinkServer telnet session connected on port 3025->50796 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 15:32:50.572
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=50797, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-11 15:32:53.087
+!MESSAGE Telnet session connected on port 3330->50809 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 15:36:45.194
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 15:36:46.218
+!MESSAGE RedlinkServer telnet session connected on port 3025->52003 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 15:36:47.170
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=52004, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-11 15:36:49.698
+!MESSAGE Telnet session connected on port 3330->52016 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.launch 4 150 2026-02-11 15:51:20.358
+!MESSAGE Error starting process.
+!STACK 0
+java.io.IOException: Cannot run program "C:\Users\asyou\Desktop\Tmp\nxpcup\Debug\nxpcup.axf": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:450)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:147)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:134)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory$Builder.start(ProcessFactory.java:273)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:366)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.exec(LocalRunLaunchDelegate.java:285)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.runLocalApplication(LocalRunLaunchDelegate.java:110)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.launch(LocalRunLaunchDelegate.java:78)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.launch 4 150 2026-02-11 15:51:20.359
+!MESSAGE Cannot run program "C:\Users\asyou\Desktop\Tmp\nxpcup\Debug\nxpcup.axf": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "C:\Users\asyou\Desktop\Tmp\nxpcup\Debug\nxpcup.axf": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:450)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:147)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:134)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory$Builder.start(ProcessFactory.java:273)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:366)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.exec(LocalRunLaunchDelegate.java:285)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.runLocalApplication(LocalRunLaunchDelegate.java:110)
+	at org.eclipse.cdt.launch.internal.LocalRunLaunchDelegate.launch(LocalRunLaunchDelegate.java:78)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.crt.log 1 0 2026-02-11 15:51:24.827
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 15:51:25.841
+!MESSAGE RedlinkServer telnet session connected on port 3025->49249 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 15:51:28.811
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=49250, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-11 15:51:31.127
+!MESSAGE Telnet session connected on port 3330->49261 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-11 15:55:31.977
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-11 15:55:33.000
+!MESSAGE RedlinkServer telnet session connected on port 3025->57135 @ 127.0.0.1
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-02-11 21:29:01.543
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$LookupJob
+!SESSION 2026-02-12 09:28:03.571 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-02-12 09:29:21.171
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\asyou'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.crt.log 1 0 2026-02-12 09:53:14.011
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-12 09:53:14.017
+!MESSAGE RedlinkServer telnet session connected on port 3025->63314 @ 127.0.0.1
+
+!ENTRY com.crt.log 4 -1 2026-02-12 09:53:29.873
+!MESSAGE Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+!STACK 0
+java.lang.Exception: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:267)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.connect(AbstractJtagDiscovery.java:212)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.discover(AbstractJtagDiscovery.java:157)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.TargetDiscovery.jtagDiscovery(TargetDiscovery.java:461)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.getEmulatorInfo(LaunchScriptUtils.java:257)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.init(LaunchScriptUtils.java:497)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:165)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:152)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.services.TargetDiscoveryService.getTargetDiscovery(TargetDiscoveryService.java:138)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.override.LSFinalLaunchSequence$TargetDiscoveryJob.run(LSFinalLaunchSequence.java:129)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.checkServerReply(RedlinkServerClient.java:229)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.executeScript(AbstractJtagDiscovery.java:295)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.doScript(AbstractJtagDiscovery.java:275)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:262)
+	... 10 more
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.core.debug.support.linkserver] 0 0 2026-02-12 09:53:33.577
+!MESSAGE 0x5, Wire Ack Fault - target connected?
+
+!ENTRY com.nxp.swtools.mux.view 4 0 2026-02-12 09:53:36.788
+!MESSAGE waitUntilUpdated(): project.waitUntilValidated() failed
+
+!ENTRY com.nxp.swtools.utils 4 0 2026-02-12 09:53:36.788
+!MESSAGE saveConfiguration: waitUntilUpdated failed for tool: Pins
+!SESSION 2026-02-12 09:53:44.936 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-02-12 09:54:18.637
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\asyou'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.crt.log 1 0 2026-02-12 09:54:36.923
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-12 09:54:37.937
+!MESSAGE RedlinkServer telnet session connected on port 3025->62506 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-12 09:54:49.142
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-12 09:54:50.148
+!MESSAGE RedlinkServer telnet session connected on port 3025->62508 @ 127.0.0.1
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.core.debug.support.linkserver] 0 0 2026-02-12 09:54:57.506
+!MESSAGE 0x301, No probes found
+
+!ENTRY com.crt.log 4 -1 2026-02-12 09:55:08.930
+!MESSAGE Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+!STACK 0
+java.lang.Exception: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:267)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.connect(AbstractJtagDiscovery.java:212)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.discover(AbstractJtagDiscovery.java:157)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.TargetDiscovery.jtagDiscovery(TargetDiscovery.java:461)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.getEmulatorInfo(LaunchScriptUtils.java:257)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.init(LaunchScriptUtils.java:497)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:165)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:152)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.services.TargetDiscoveryService.getTargetDiscovery(TargetDiscoveryService.java:138)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.override.LSFinalLaunchSequence$TargetDiscoveryJob.run(LSFinalLaunchSequence.java:129)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.checkServerReply(RedlinkServerClient.java:229)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.executeScript(AbstractJtagDiscovery.java:295)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.doScript(AbstractJtagDiscovery.java:275)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:262)
+	... 10 more
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.core.debug.support.linkserver] 0 0 2026-02-12 09:55:12.570
+!MESSAGE 0x5, Wire Ack Fault - target connected?
+
+!ENTRY com.crt.log 1 0 2026-02-12 09:55:21.423
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-12 09:55:22.440
+!MESSAGE RedlinkServer telnet session connected on port 3025->62513 @ 127.0.0.1
+
+!ENTRY com.crt.log 4 -1 2026-02-12 09:55:32.516
+!MESSAGE Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+!STACK 0
+java.lang.Exception: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:267)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.connect(AbstractJtagDiscovery.java:212)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.discover(AbstractJtagDiscovery.java:157)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.TargetDiscovery.jtagDiscovery(TargetDiscovery.java:461)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.getEmulatorInfo(LaunchScriptUtils.java:257)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.init(LaunchScriptUtils.java:497)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:165)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:152)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.services.TargetDiscoveryService.getTargetDiscovery(TargetDiscoveryService.java:138)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.override.LSFinalLaunchSequence$TargetDiscoveryJob.run(LSFinalLaunchSequence.java:129)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.checkServerReply(RedlinkServerClient.java:229)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.executeScript(AbstractJtagDiscovery.java:295)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.doScript(AbstractJtagDiscovery.java:275)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:262)
+	... 10 more
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.core.debug.support.linkserver] 0 0 2026-02-12 09:55:35.218
+!MESSAGE 0x5, Wire Ack Fault - target connected?
+
+!ENTRY com.crt.log 1 0 2026-02-12 09:55:44.183
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-12 09:55:45.199
+!MESSAGE RedlinkServer telnet session connected on port 3025->62515 @ 127.0.0.1
+
+!ENTRY com.crt.log 4 -1 2026-02-12 09:55:55.173
+!MESSAGE Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+!STACK 0
+java.lang.Exception: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:267)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.connect(AbstractJtagDiscovery.java:212)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.discover(AbstractJtagDiscovery.java:157)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.TargetDiscovery.jtagDiscovery(TargetDiscovery.java:461)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.getEmulatorInfo(LaunchScriptUtils.java:257)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.init(LaunchScriptUtils.java:497)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:165)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:152)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.services.TargetDiscoveryService.getTargetDiscovery(TargetDiscoveryService.java:138)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.override.LSFinalLaunchSequence$TargetDiscoveryJob.run(LSFinalLaunchSequence.java:129)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.checkServerReply(RedlinkServerClient.java:229)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.executeScript(AbstractJtagDiscovery.java:295)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.doScript(AbstractJtagDiscovery.java:275)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:262)
+	... 10 more
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.core.debug.support.linkserver] 0 0 2026-02-12 09:56:02.331
+!MESSAGE 0x5, Wire Ack Fault - target connected?
+
+!ENTRY com.crt.log 1 0 2026-02-12 09:56:19.884
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-12 09:56:20.891
+!MESSAGE RedlinkServer telnet session connected on port 3025->62525 @ 127.0.0.1
+
+!ENTRY com.crt.log 4 -1 2026-02-12 09:56:30.850
+!MESSAGE Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+!STACK 0
+java.lang.Exception: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:267)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.connect(AbstractJtagDiscovery.java:212)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.discover(AbstractJtagDiscovery.java:157)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.TargetDiscovery.jtagDiscovery(TargetDiscovery.java:461)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.getEmulatorInfo(LaunchScriptUtils.java:257)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.init(LaunchScriptUtils.java:497)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:165)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:152)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.services.TargetDiscoveryService.getTargetDiscovery(TargetDiscoveryService.java:138)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.override.LSFinalLaunchSequence$TargetDiscoveryJob.run(LSFinalLaunchSequence.java:129)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.checkServerReply(RedlinkServerClient.java:229)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.executeScript(AbstractJtagDiscovery.java:295)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.doScript(AbstractJtagDiscovery.java:275)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:262)
+	... 10 more
+
+!ENTRY com.crt.log 1 0 2026-02-12 09:57:34.028
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-12 09:57:35.039
+!MESSAGE RedlinkServer telnet session connected on port 3025->52134 @ 127.0.0.1
+
+!ENTRY com.crt.log 4 -1 2026-02-12 09:57:45.156
+!MESSAGE Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+!STACK 0
+java.lang.Exception: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:267)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.connect(AbstractJtagDiscovery.java:212)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.discover(AbstractJtagDiscovery.java:157)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.TargetDiscovery.jtagDiscovery(TargetDiscovery.java:461)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.getEmulatorInfo(LaunchScriptUtils.java:257)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.init(LaunchScriptUtils.java:497)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:165)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:152)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.services.TargetDiscoveryService.getTargetDiscovery(TargetDiscoveryService.java:138)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.override.LSFinalLaunchSequence$TargetDiscoveryJob.run(LSFinalLaunchSequence.java:129)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.checkServerReply(RedlinkServerClient.java:229)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.executeScript(AbstractJtagDiscovery.java:295)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.doScript(AbstractJtagDiscovery.java:275)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:262)
+	... 10 more
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.core.debug.support.linkserver] 0 0 2026-02-12 09:57:48.507
+!MESSAGE 0x5, Wire Ack Fault - target connected?
+
+!ENTRY com.crt.log 1 0 2026-02-12 09:58:16.187
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-12 09:58:17.199
+!MESSAGE RedlinkServer telnet session connected on port 3025->50242 @ 127.0.0.1
+
+!ENTRY com.crt.log 4 -1 2026-02-12 09:58:33.211
+!MESSAGE Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+!STACK 0
+java.lang.Exception: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:267)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.connect(AbstractJtagDiscovery.java:212)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.discover(AbstractJtagDiscovery.java:157)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.TargetDiscovery.jtagDiscovery(TargetDiscovery.java:461)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.getEmulatorInfo(LaunchScriptUtils.java:257)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.init(LaunchScriptUtils.java:497)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:165)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:152)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.services.TargetDiscoveryService.getTargetDiscovery(TargetDiscoveryService.java:138)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.override.LSFinalLaunchSequence$TargetDiscoveryJob.run(LSFinalLaunchSequence.java:129)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: Unable to run part script index C:\nxp\LinkServer_25.6.131\binaries\ToolScripts\LS_preconnect_MCXN9XX.scp.
+Probe Handle 1 Open
+Reset pin state: 01
+DpID = 6BA02477
+TAP 0: 6BA02477 AP   0:     APID: 84770001 ROM Table: E00FE003
+TAP 0: 6BA02477 AP   1:     APID: 84770001 ROM Table: E00FF003
+TAP 0: 6BA02477 AP   2:     APID: 002A0000 ROM Table: 00000000
+
+Issuing Debug Session Request... 7
+
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 1st retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP request: 7 2nd retry...
+DM-AP status: 26A50148
+DM-AP: AHB_OR_ERR (       8)
+DM-AP: DBG_OR_ERR (       4)
+DM-AP status: Wire Ack Wait Fault
+DM-AP return: FFFF
+
+Disable GDET...
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+Error: Wire Ack Fault - target connected?
+
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.checkServerReply(RedlinkServerClient.java:229)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.executeScript(AbstractJtagDiscovery.java:295)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.doScript(AbstractJtagDiscovery.java:275)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.preConnectScript(AbstractJtagDiscovery.java:262)
+	... 10 more
+
+!ENTRY [ERROR] [com.nxp.mcuxpresso.core.debug.support.linkserver] 0 0 2026-02-12 09:58:42.804
+!MESSAGE 0x5, Wire Ack Fault - target connected?
+
+!ENTRY com.crt.log 1 0 2026-02-12 09:58:56.709
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-12 09:58:57.725
+!MESSAGE RedlinkServer telnet session connected on port 3025->58809 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-12 09:59:00.310
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58810, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-12 09:59:03.017
+!MESSAGE Telnet session connected on port 3330->58823 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-12 10:23:24.308
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2026-02-12 10:23:25.316
+!MESSAGE RedlinkServer telnet session connected on port 3025->53430 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2026-02-12 10:23:48.753
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_25.6.131/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=63865, -g, -mi, -2, -pMCXN947, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/asyou/Desktop/Tmp/nxpcup/Debug, --flash-dir, C:/nxp/LinkServer_25.6.131/binaries/Flash, --flash-dir, C:/Users/asyou/Desktop/Tmp/.mcuxpressoide_packages_support/MCXN947_support/Flash, --telnet, 3330, --romstalldelay, 600 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2026-02-12 10:23:51.480
+!MESSAGE Telnet session connected on port 3330->63878 @ 127.0.0.1
+!SESSION 2026-02-16 14:12:46.345 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-02-16 14:13:48.183
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\asyou'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.jobs 4 2 2026-02-16 23:45:49.748
+!MESSAGE An internal error occurred during: "UI refresh".
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1278)
+	at org.eclipse.swt.widgets.Display.getThread(Display.java:2590)
+	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper.runNowOrInJob(UIJobHelper.java:215)
+	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.cancelPrevJob(ValidationService.java:251)
+	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.runAction(ValidationService.java:226)
+	at com.nxp.swtools.common.utils.runtime.DelayedExecution$1.run(DelayedExecution.java:379)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
