@@ -13,7 +13,7 @@
 #define STEERING_OFFSET      -0
 
 // Wheel speeds
-#define SPEED_RIGHT           -60
-#define SPEED_LEFT            60
+#define SPEED_RIGHT           -80
+#define SPEED_LEFT            80
 
 #endif
