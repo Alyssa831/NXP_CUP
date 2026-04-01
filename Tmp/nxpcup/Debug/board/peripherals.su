@@ -1,8 +1,8 @@
-C:\Users\asyou\Desktop\Tmp\nxpcup\CMSIS/core_cm33.h:2358:22:__NVIC_EnableIRQ	16	static
-C:\Users\asyou\Desktop\Tmp\nxpcup\CMSIS/core_cm33.h:2555:22:__NVIC_SetPriority	16	static
-C:\Users\asyou\Desktop\Tmp\nxpcup\drivers/fsl_common_arm.h:672:24:EnableIRQ	24	static
-C:\Users\asyou\Desktop\Tmp\nxpcup\drivers/fsl_edma.h:705:20:EDMA_SetChannelMux	24	static
-C:\Users\asyou\Desktop\Tmp\nxpcup\drivers/fsl_ctimer.h:517:20:CTIMER_StartTimer	16	static
+C:\Users\Alyss\NXP_CUP\NXP_CUP\Tmp\nxpcup\CMSIS/core_cm33.h:2358:22:__NVIC_EnableIRQ	16	static
+C:\Users\Alyss\NXP_CUP\NXP_CUP\Tmp\nxpcup\CMSIS/core_cm33.h:2555:22:__NVIC_SetPriority	16	static
+C:\Users\Alyss\NXP_CUP\NXP_CUP\Tmp\nxpcup\drivers/fsl_common_arm.h:672:24:EnableIRQ	24	static
+C:\Users\Alyss\NXP_CUP\NXP_CUP\Tmp\nxpcup\drivers/fsl_edma.h:705:20:EDMA_SetChannelMux	24	static
+C:\Users\Alyss\NXP_CUP\NXP_CUP\Tmp\nxpcup\drivers/fsl_ctimer.h:517:20:CTIMER_StartTimer	16	static
 ../board/peripherals.c:201:13:CTIMER0_init	16	static
 ../board/peripherals.c:251:13:GPIO0_init	8	static
 ../board/peripherals.c:304:13:CTIMER2_init	16	static

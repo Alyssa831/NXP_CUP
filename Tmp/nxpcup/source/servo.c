@@ -26,13 +26,15 @@ void TestServo(){
 	volatile int Delay;
 	volatile int SteerStrength;
 	while(1){
-		for(SteerStrength = -100; SteerStrength <=100; SteerStrength++){
+		for(SteerStrength = -10; SteerStrength <=0; SteerStrength++){
 			Delay = 200000;
 			while(Delay){
 				Delay--;
 			}
 			PRINTF("Steer: %d\n", SteerStrength);
 			Steer(SteerStrength);
+			if (SteerStrength==0) return;
 		}
+
 	}
 }

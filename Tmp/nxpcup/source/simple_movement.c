@@ -34,15 +34,15 @@ int main2(void)
                 GPIO0, 27U);
     HbridgeSpeed(&g_hbridge, SPEED_LEFT, SPEED_RIGHT);
 
-//    Esc esc1, esc2;
-//    EscInit(&esc1, CTIMER2_PERIPHERAL, CTIMER2_PWM_PERIOD_CH, kCTIMER_Match_1);
-//    EscInit(&esc2, CTIMER2_PERIPHERAL, CTIMER2_PWM_PERIOD_CH, kCTIMER_Match_3);
-//    EscSetSpeed(&esc1, 79.0);
-//    EscBrake(&esc1);
-//    EscSetSpeed(&esc2, 59.0);
-//    EscBrake(&esc2);
+    Esc esc1, esc2;
+    EscInit(&esc1, CTIMER2_PERIPHERAL, CTIMER2_PWM_PERIOD_CH, kCTIMER_Match_1);
+    EscInit(&esc2, CTIMER2_PERIPHERAL, CTIMER2_PWM_PERIOD_CH, kCTIMER_Match_3);
+    EscSetSpeed(&esc1, 79.0);
+    EscBrake(&esc1);
+    EscSetSpeed(&esc2, 59.0);
+    EscBrake(&esc2);
 
-//    TestServo();
+    TestServo();
 
 	int index = 0;
 	while(1){
