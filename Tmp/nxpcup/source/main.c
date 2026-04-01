@@ -21,7 +21,7 @@ int main(void)
     uint16_t vectors[MAX_VECTORS * 4];
     size_t   num_vectors;
 
-	PRINTF("Initializing Board\n");
+           	PRINTF("Initializing Board\n");
     BOARD_InitHardware();
     BOARD_InitBootPins();
     BOARD_InitBootPeripherals();
@@ -36,13 +36,13 @@ int main(void)
                 GPIO0, 27U);
     HbridgeSpeed(&g_hbridge, SPEED_LEFT, SPEED_RIGHT);
 
-    Esc esc1, esc2;
-    EscInit(&esc1, CTIMER2_PERIPHERAL, CTIMER2_PWM_PERIOD_CH, kCTIMER_Match_1);
-    EscInit(&esc2, CTIMER2_PERIPHERAL, CTIMER2_PWM_PERIOD_CH, kCTIMER_Match_3);
-    EscSetSpeed(&esc1, 79.0);
-    EscBrake(&esc1);
-    EscSetSpeed(&esc2, 59.0);
-    EscBrake(&esc2);
+//    Esc esc1, esc2;
+//    EscInit(&esc1, CTIMER2_PERIPHERAL, CTIMER2_PWM_PERIOD_CH, kCTIMER_Match_1);
+//    EscInit(&esc2, CTIMER2_PERIPHERAL, CTIMER2_PWM_PERIOD_CH, kCTIMER_Match_3);
+//    EscSetSpeed(&esc1, 60.0);
+//    EscBrake(&esc1);
+//    EscSetSpeed(&esc2, 60.0);
+//    EscBrake(&esc2);
 
     TestServo();
     pixy_t cam1;
@@ -65,10 +65,11 @@ int main(void)
     	            uint16_t y1 = vectors[4*i + 3];
     	            PRINTF("  [%2u] (%u,%u)->(%u,%u)\r\n", (unsigned)i, x0, y0, x1, y1);
     	            double m = ((double)x0-(double)x1) / ((double)y0-(double)y1);
+    	            //if (m >= -1.7 && m <= 1.7)  	//ignore near parallel lines (allow max 30 degrees)
     	            angle += m;
     	        }
     	        angle *= -1;
-//    	        PRINTF("Angle: %u\n" , angle);
+    	        PRINTF("Angle: %u\n" , angle);
     	        if(angle > 0)
     	        	angle *= STEERING_P_RIGHT;
     	        else{
@@ -83,6 +84,8 @@ int main(void)
     	        if(num_vectors !=0)
     	        	Steer(angle + STEERING_OFFSET);
     	    }
+//    	EscSetSpeed(&esc1, (double)SPEED_LEFT);
+//    	EscSetSpeed(&esc2, (double)SPEED_RIGHT);
 
         HbridgeSpeed(&g_hbridge, SPEED_LEFT, SPEED_RIGHT);
 

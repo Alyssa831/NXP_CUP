@@ -26,8 +26,8 @@ void TestServo(){
 	volatile int Delay;
 	volatile int SteerStrength;
 	while(1){
-		for(SteerStrength = -10; SteerStrength <=0; SteerStrength++){
-			Delay = 200000;
+		for(SteerStrength = -40; SteerStrength <=40; SteerStrength++){
+			Delay = 2000;
 			while(Delay){
 				Delay--;
 			}
