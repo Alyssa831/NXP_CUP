@@ -26,6 +26,7 @@ void HbridgeInit(Hbridge *h,
     h->motor2DirPin     = m2DirPin;
     h->pwmPeripheral    = pwmPeriph;
 }
+/*
 
 void HbridgeSpeed(Hbridge *h, int16_t speed1, int16_t speed2)
 {
@@ -60,8 +61,83 @@ void HbridgeSpeed(Hbridge *h, int16_t speed1, int16_t speed2)
 
     CTIMER_UpdatePwmDutycycle(h->pwmPeripheral,h->periodChannel , h->pwm1Channel, duty1);
     CTIMER_UpdatePwmDutycycle(h->pwmPeripheral,h->periodChannel , h->pwm2Channel, duty2);
-}
+}*/
 
+/*
+
+void HbridgeSpeed(Hbridge *h, int16_t speed1, int16_t speed2)
+{
+    uint8_t duty1, duty2;
+
+    // Limit maximum requested speeds so we don't break the math
+    if (speed1 > 100) speed1 = 100;
+    if (speed1 < -100) speed1 = -100;
+    if (speed2 > 100) speed2 = 100;
+    if (speed2 < -100) speed2 = -100;
+
+    // --- MOTOR 1 LOGIC (Left Motor) ---
+    if (speed1 >= 0) {
+        GPIO_PinWrite(h->motor1DirPort, h->motor1DirPin, 0U); // Forward
+        duty1 = (uint8_t)(100 - speed1); // Fixes the NXP SDK inversion!
+    } else {
+        GPIO_PinWrite(h->motor1DirPort, h->motor1DirPin, 1U); // Reverse
+        duty1 = (uint8_t)(-speed1);      // Absolute value for reverse scaling
+    }
+
+    // --- MOTOR 2 LOGIC (Right Motor) ---
+    if (speed2 >= 0) {
+        GPIO_PinWrite(h->motor2DirPort, h->motor2DirPin, 0U); // Forward
+        duty2 = (uint8_t)(100 - speed2);
+    } else {
+        GPIO_PinWrite(h->motor2DirPort, h->motor2DirPin, 1U); // Reverse
+        duty2 = (uint8_t)(-speed2);
+    }
+
+    // Double check we never pass an invalid duty cycle to the hardware
+    if (duty1 > 100U) duty1 = 100U;
+    if (duty2 > 100U) duty2 = 100U;
+
+    // Send the fixed values to the timer
+    CTIMER_UpdatePwmDutycycle(h->pwmPeripheral, h->periodChannel, h->pwm1Channel, duty1);
+    CTIMER_UpdatePwmDutycycle(h->pwmPeripheral, h->periodChannel, h->pwm2Channel, duty2);
+}
+*/
+void HbridgeSpeed(Hbridge *h, int16_t speed1, int16_t speed2)
+{
+    uint8_t duty1, duty2;
+
+    // Limit maximum requested speeds to prevent math overflow
+    if (speed1 > 100) speed1 = 100;
+    if (speed1 < -100) speed1 = -100;
+    if (speed2 > 100) speed2 = 100;
+    if (speed2 < -100) speed2 = -100;
+
+    // --- MOTOR 1 LOGIC (Left Motor) ---
+    if (speed1 >= 0) {
+        GPIO_PinWrite(h->motor1DirPort, h->motor1DirPin, 0U); // DIR Low
+        duty1 = (uint8_t)(speed1);                            // Direct: 80% speed = 80% High
+    } else {
+        GPIO_PinWrite(h->motor1DirPort, h->motor1DirPin, 1U); // DIR High
+        duty1 = (uint8_t)(100 - (-speed1));                   // Inverted: 80% reverse = 20% High
+    }
+
+    // --- MOTOR 2 LOGIC (Right Motor) ---
+    if (speed2 >= 0) {
+        GPIO_PinWrite(h->motor2DirPort, h->motor2DirPin, 0U);
+        duty2 = (uint8_t)(speed2);
+    } else {
+        GPIO_PinWrite(h->motor2DirPort, h->motor2DirPin, 1U);
+        duty2 = (uint8_t)(100 - (-speed2));
+    }
+
+    // Double check we never pass an invalid duty cycle to the hardware
+    if (duty1 > 100U) duty1 = 100U;
+    if (duty2 > 100U) duty2 = 100U;
+
+    // Send the fixed values to the timer
+    CTIMER_UpdatePwmDutycycle(h->pwmPeripheral, h->periodChannel, h->pwm1Channel, duty1);
+    CTIMER_UpdatePwmDutycycle(h->pwmPeripheral, h->periodChannel, h->pwm2Channel, duty2);
+}
 void HbridgeBrake(Hbridge *h)
 {
     GPIO_PinWrite(h->motor1DirPort, h->motor1DirPin, 0U);
