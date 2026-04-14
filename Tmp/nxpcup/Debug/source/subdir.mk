@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../source/calibration.c \
 ../source/esc.c \
 ../source/hbridge.c \
 ../source/main.c \
@@ -13,6 +14,7 @@ C_SRCS += \
 ../source/simple_movement.c 
 
 C_DEPS += \
+./source/calibration.d \
 ./source/esc.d \
 ./source/hbridge.d \
 ./source/main.d \
@@ -22,6 +24,7 @@ C_DEPS += \
 ./source/simple_movement.d 
 
 OBJS += \
+./source/calibration.o \
 ./source/esc.o \
 ./source/hbridge.o \
 ./source/main.o \
@@ -43,7 +46,7 @@ source/%.o: ../source/%.c source/subdir.mk
 clean: clean-source
 
 clean-source:
-	-$(RM) ./source/esc.d ./source/esc.o ./source/hbridge.d ./source/hbridge.o ./source/main.d ./source/main.o ./source/pixy.d ./source/pixy.o ./source/semihost_hardfault.d ./source/semihost_hardfault.o ./source/servo.d ./source/servo.o ./source/simple_movement.d ./source/simple_movement.o
+	-$(RM) ./source/calibration.d ./source/calibration.o ./source/esc.d ./source/esc.o ./source/hbridge.d ./source/hbridge.o ./source/main.d ./source/main.o ./source/pixy.d ./source/pixy.o ./source/semihost_hardfault.d ./source/semihost_hardfault.o ./source/servo.d ./source/servo.o ./source/simple_movement.d ./source/simple_movement.o
 
 .PHONY: clean-source
 

@@ -12,280 +12,208 @@
 #include "servo.h"
 #include "esc.h"
 #include <math.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
 
-#define MAX_VECTORS 10
+#include "calibration.h"
 
-double g_camera_center_x = 45.0;
-double g_ideal_lane_half_width = 31.0;
+// --- OBSTACLE SENSOR DEFINES ---
+#define TRIG_PIN  31U   // P0_31
+#define ECHO_PIN  28U   // P0_28
+#define OBSTACLE_THRESHOLD_CM 15.0f
 
-// ==========================================
-// 1. ADD A GLOBAL MILLISECOND TIMER VARIABLE
-// ==========================================
 volatile uint32_t g_ms_timer = 0;
+static bool is_braking = false;
+float current_drive_speed = 100.0f;
 
-// ==========================================
-// 2. ADD THE SYSTICK INTERRUPT HANDLER
-// ==========================================
 void SysTick_Handler(void) {
     g_ms_timer++;
 }
 
-// OUTER LOOP TUNING VARIABLES (To be tuned later)
-double K_px = 0.5;   // Proportional gain for position
-double K_ix = 0.01;  // Integral gain for position
-
-void CalibrateTrack(pixy_t *cam) {
-    // ... [Your existing CalibrateTrack code remains unchanged] ...
-    uint16_t vectors[MAX_VECTORS * 4];
-    size_t num_vectors;
-
-    PRINTF("\r\n--- STARTING AUTO-CALIBRATION ---\r\n");
-    PRINTF("Keep the car perfectly centered on the straight track...\r\n");
-
-    SDK_DelayAtLeastUs(1000000, SystemCoreClock);
-
-    int successful_reads = 0;
-    double total_center = 0.0;
-    double total_width = 0.0;
-
-    while (successful_reads < 10) {
-        if (pixy_get_vectors(cam, vectors, MAX_VECTORS, &num_vectors) == kStatus_Success) {
-//            PRINTF("\r\nCalibration Frame %d - Detected %u Vectors:\r\n", successful_reads + 1, num_vectors);
-
-            for (size_t i = 0; i < num_vectors; i++) {
-                uint16_t x0 = vectors[4*i + 0];
-                uint16_t y0 = vectors[4*i + 1];
-                uint16_t x1 = vectors[4*i + 2];
-                uint16_t y1 = vectors[4*i + 3];
-//                PRINTF("  [%2u] (%3u,%3u)->(%3u,%3u)\r\n", (unsigned)i, x0, y0, x1, y1);
-            }
-
-            if (num_vectors >= 2) {
-                double left_x = 999.0;
-                double right_x = 0.0;
-
-                for(size_t i = 0; i < num_vectors; i++) {
-                    uint16_t x0 = vectors[4*i + 0];
-                    uint16_t x1 = vectors[4*i + 2];
-                    double mid_x = ((double)x0 + (double)x1) / 2.0;
-
-                    if (mid_x < left_x)  left_x = mid_x;
-                    if (mid_x > right_x) right_x = mid_x;
-                }
-
-                double center = (left_x + right_x) / 2.0;
-                double half_width = (right_x - left_x) / 2.0;
-
-//                PRINTF("  -> Calculated Center X: %d | Half-Width: %d\r\n", (int)center, (int)half_width);
-
-                total_center += center;
-                total_width += half_width;
-                successful_reads++;
-
-                SDK_DelayAtLeastUs(50000, SystemCoreClock);
-            } else {
-//                PRINTF("  -> Not enough lines for calibration (need >= 2). Retrying...\r\n");
-                SDK_DelayAtLeastUs(50000, SystemCoreClock);
-            }
-        }
-    }
-
-    g_camera_center_x = total_center / 10.0;
-    g_ideal_lane_half_width = total_width / 10.0;
-
-//    PRINTF("\r\nCalibration Complete!\r\n");
-//    PRINTF("Final Averaged Center X: %d\r\n", (int)g_camera_center_x);
-//    PRINTF("Final Averaged Half-Width: %d\r\n", (int)g_ideal_lane_half_width);
-//    PRINTF("---------------------------------\r\n\n");
+// --- ULTRASONIC SENSOR FUNCTIONS ---
+static void DWT_Init(void) {
+    CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
+    DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
+    DWT->CYCCNT = 0;
 }
 
+static void delay_us(uint32_t us) {
+    uint32_t start = DWT->CYCCNT;
+    uint32_t cycles = (SystemCoreClock / 1000000U) * us;
+    while ((DWT->CYCCNT - start) < cycles) {}
+}
 
-int main(void)
-{
+static uint32_t micros_now(void) {
+    return DWT->CYCCNT / (SystemCoreClock / 1000000U);
+}
+
+static void HC_SR04_InitPins(void) {
+    SYSCON->AHBCLKCTRLSET[0] = (1u << 13);  // PORT0
+    SYSCON->AHBCLKCTRLSET[0] = (1u << 19);  // GPIO0
+    PORT0->PCR[TRIG_PIN] = 0x1000;
+    PORT0->PCR[ECHO_PIN] = 0x1000;
+    GPIO0->PDDR |=  (1u << TRIG_PIN);
+    GPIO0->PDDR &= ~(1u << ECHO_PIN);
+    GPIO0->PCOR = (1u << TRIG_PIN);
+}
+
+static bool HC_SR04_ReadDistanceCm(float *distance_cm) {
+    uint32_t t0, t1, timeout_start;
+    GPIO0->PCOR = (1u << TRIG_PIN);
+    delay_us(2);
+    GPIO0->PSOR = (1u << TRIG_PIN);
+    delay_us(10);
+    GPIO0->PCOR = (1u << TRIG_PIN);
+    timeout_start = micros_now();
+    while (((GPIO0->PDIR >> ECHO_PIN) & 1u) == 0u) {
+        if ((micros_now() - timeout_start) > 30000U) return false;
+    }
+    t0 = micros_now();
+    timeout_start = micros_now();
+    while (((GPIO0->PDIR >> ECHO_PIN) & 1u) == 1u) {
+        if ((micros_now() - timeout_start) > 30000U) return false;
+    }
+    t1 = micros_now();
+    *distance_cm = (t1 - t0) / 58.0f;
+    return true;
+}
+
+int main(void) {
     uint16_t vectors[MAX_VECTORS * 4];
     size_t   num_vectors;
-//    PRINTF("Initializing Board\n");
+    float distance_cm = 100.0f;
+
     BOARD_InitHardware();
     BOARD_InitBootPins();
     BOARD_InitBootPeripherals();
+    SystemCoreClockUpdate();
+    SysTick_Config(SystemCoreClock / 1000U);
+    DWT_Init();
+    HC_SR04_InitPins();
 
-//    PRINTF("Initializing HBRIDGE\n");
-    HbridgeInit(&g_hbridge,
-                CTIMER0_PERIPHERAL,
-                CTIMER0_PWM_PERIOD_CH,
-                CTIMER0_PWM_1_CHANNEL,
-                CTIMER0_PWM_2_CHANNEL,
-                GPIO0, 24U,
-                GPIO0, 27U);
+    HbridgeInit(&g_hbridge, CTIMER0_PERIPHERAL, CTIMER0_PWM_PERIOD_CH,
+                CTIMER0_PWM_1_CHANNEL, CTIMER0_PWM_2_CHANNEL,
+                GPIO0, 24U, GPIO0, 27U);
 
     pixy_t cam1;
-//    PRINTF("Initializing PIXY\n");
     pixy_init(&cam1, LPI2C2, 0x54U, &LP_FLEXCOMM2_RX_Handle, &LP_FLEXCOMM2_TX_Handle);
-
-//    PRINTF("Setting PIXY LED\n");
     pixy_set_led(&cam1, 255, 0, 0);
 
-//    PRINTF("INITIALIZATION COMPLETE\n");
+    float integral_x = 0.0f;
+    float previous_pos_error = 0.0f;
+    bool is_slow_mode = false;
 
-//    TestServo();
-    //CalibrateTrack(&cam1);
+    while (1) {
+        if (g_ms_timer < STARTUP_DELAY_MS) {
+            HbridgeSpeed(&g_hbridge, 0, 0);
+            Steer(STEERING_OFFSET);
+            continue;
+        }
 
-    const double PERPENDICULAR_THRESHOLD = 4.7;
+        // --- OBSTACLE DETECTION & //PRINT ---
+        if (HC_SR04_ReadDistanceCm(&distance_cm)) {
+            //PRINTF("Distance: %.2f cm | <10cm: %s\r\n",distance_cm, (distance_cm < OBSTACLE_THRESHOLD_CM) ? "YES" : "NO");
+        }
 
-    // INNER LOOP STATE VARIABLES
-    double previous_angle_error = 0.0;
-    const double DERIVATIVE_ALPHA = 0.3;
-    double previous_filtered_derivative = 0.0;
-
-    // OUTER LOOP STATE VARIABLES
-    double integral_x = 0.0;
-
-    while (1)
-    {
+        // --- CAMERA PROCESSING ---
         if (pixy_get_vectors(&cam1, vectors, MAX_VECTORS, &num_vectors) == kStatus_Success) {
-
-            double total_angle = 0.0;
-            double total_position_error = 0.0;
-
+            float total_angle = 0.0f;
+            float total_position_error = 0.0f;
             int valid_lines_count = 0;
             int valid_position_count = 0;
 
             for (size_t i = 0; i < num_vectors; i++) {
-                uint16_t x0 = vectors[4*i + 0];
-                uint16_t y0 = vectors[4*i + 1];
-                uint16_t x1 = vectors[4*i + 2];
-                uint16_t y1 = vectors[4*i + 3];
+                uint16_t x0 = vectors[4*i + 0], y0 = vectors[4*i + 1];
+                uint16_t x1 = vectors[4*i + 2], y1 = vectors[4*i + 3];
 
+                if (y1 > y0) {
+                    uint16_t tempX = x0; uint16_t tempY = y0;
+                    x0 = x1; y0 = y1; x1 = tempX; y1 = tempY;
+                }
                 if (y0 == y1) continue;
 
-                // 1. Calculate and accumulate angle (theta)
-                double m = ((double)x0-(double)x1) / ((double)y0-(double)y1);
-                double theta_degrees = atan(m) * (180.0 / 3.1415926535);
+                float theta_degrees = atanf(((float)x0 - (float)x1) / ((float)y0 - (float)y1)) * (180.0f / 3.1415926535f);
 
-                if (fabs(m) > PERPENDICULAR_THRESHOLD){
-                	PRINTF(" Vec[%u]: (%3u,%3u)->(%3u,%3u) | m: %5.2f | Theta: %5.1f | IGNORED (Crossroad)\r\n", i, x0, y0, x1, y1, m, theta_degrees);
-                	continue;
-                }
+                if (fabsf(theta_degrees) > HORIZONTAL_ANGLE_THRESHOLD) {
+                    float line_mid_x = ((float)x0 + (float)x1) / 2.0f;
+                    if (fabsf(line_mid_x - CAMERA_CENTER_X) < START_LINE_X_TOLERANCE) {
+                        if (g_ms_timer > SLOW_MODE_TIME_MS) is_slow_mode = true;
+                        //PRINTF("Vector[%d]: theta_degrees = %d, \r\n", (int)i, (int)theta_degrees);
 
-                total_angle += m;
-                valid_lines_count++;
-                // Print the accepted vector, m, Theta, and running tally
-                PRINTF(" Vec[%u]: (%3u,%3u)->(%3u,%3u) | m: %5.2f | Theta: %5.1f | ACCEPTED | Run Angle: %5.2f\r\n", i, x0, y0, x1, y1, m, theta_degrees,  total_angle);
-
-
-                // 2. Calculate and accumulate cross-track error (x_c - x)
-                double bottom_x, bottom_y;
-                if (y0 > y1) {
-                    bottom_x = x0; bottom_y = y0;
-                } else {
-                    bottom_x = x1; bottom_y = y1;
-                }
-
-                if (bottom_y > 35) {
-                    double expected_x;
-                    if (bottom_x < g_camera_center_x) {
-                        expected_x = g_camera_center_x - g_ideal_lane_half_width;
-                    } else {
-                        expected_x = g_camera_center_x + g_ideal_lane_half_width;
                     }
+                    continue;
+                }
 
-                    // Calculate positional error: Target(xc) - Current(x)
-                    double position_error = expected_x - bottom_x;
-                    total_position_error += position_error;
+                if (y0 > POS_ERROR_Y_THRESHOLD) {
+                    float expected_x = (x0 < CAMERA_CENTER_X) ? (CAMERA_CENTER_X - IDEAL_LANE_HALF_WIDTH) : (CAMERA_CENTER_X + IDEAL_LANE_HALF_WIDTH);
+                    float individual_error = expected_x - (float)x0;
+
+                    // RESTORED POSITION //PRINT
+                    //PRINTF("Vector[%d]: position = %d, position error = %d\r\n", (int)i, (int)x0, (int)individual_error);
+
+                    total_position_error += -individual_error;
                     valid_position_count++;
                 }
+
+                if (y0 > ANGLE_Y_THRESHOLD) {
+                    float perspective_bend = ((float)x0 - CAMERA_CENTER_X) * PERSPECTIVE_BEND_FACTOR;
+                    float true_angle = theta_degrees - perspective_bend;
+
+                    // RESTORED ANGLE //PRINT
+                    //PRINTF("Vector[%d]: Raw Angle = %d, Corrected Angle = %d\r\n", (int)i, (int)theta_degrees, (int)true_angle);
+
+                    total_angle += -true_angle;
+                    valid_lines_count++;
+                }
             }
 
-            double final_steering = 0.0;
+            // --- PID CONTROLLER ---
+            float final_steering = 0.0f;
+            if (valid_lines_count > 0 && valid_position_count > 0) {
+                float avg_pos_err = total_position_error / (float)valid_position_count;
+                float current_angle = total_angle / (float)valid_lines_count;
 
-            if (valid_lines_count > 0) {
-
-                // Average the readings
-                double current_angle = total_angle / (double)valid_lines_count;
-                current_angle *= -1.0; // Maintain your original sign convention
-
-
-                double avg_position_error = 0.0;
-                if (valid_position_count > 0) {
-                    avg_position_error = total_position_error / (double)valid_position_count;
+                if (!is_braking && fabsf(current_angle) > slow_down_angle) {
+                    is_braking = true;
+                    current_drive_speed = turning_speed;
+                }
+                else if (is_braking && fabsf(current_angle) < slow_down_angle - 3.0) {
+                    is_braking = false;
+                    current_drive_speed = SPEED;
                 }
 
-                // ========================================================
-                // OUTER LOOP (PI): Translates Position Error -> Target Angle
-                // ========================================================
+                integral_x += avg_pos_err;
+                if (integral_x > INTEGRAL_LIMIT) integral_x = INTEGRAL_LIMIT;
+                if (integral_x < -INTEGRAL_LIMIT) integral_x = -INTEGRAL_LIMIT;
+                if ((previous_pos_error > 0.0f && avg_pos_err < 0.0f) || (previous_pos_error < 0.0f && avg_pos_err > 0.0f)) integral_x = 0.0f;
 
-                /* --- COMMENTED OUT FOR INNER LOOP TUNING ---
+                previous_pos_error = avg_pos_err;
 
-                integral_x += avg_position_error;
+                float p_term = avg_pos_err * K_P;
+                float i_term = integral_x * K_I;
+                float d_term = current_angle * K_D;
+                final_steering = p_term + i_term + d_term;
 
-                // Calculate Theta_r (Reference Angle)
-                double target_angle = (avg_position_error * K_px) + (integral_x * K_ix);
-
-                // Optional: Clamp target angle so the car doesn't try to turn 90 degrees to fix an error
-                if (target_angle > 1.5) target_angle = 1.5;
-                if (target_angle < -1.5) target_angle = -1.5;
-
-                --------------------------------------------- */
-
-                // Hardcode Target Angle to 0 for inner-loop tuning
-                double target_angle = 0 ;
-
-                // ========================================================
-                // INNER LOOP (PD): Translates Angle Error -> Steering Effort
-                // ========================================================
-
-                // Calculate error (Theta_r - Theta)
-                double angle_error = -target_angle + current_angle;
-
-                // 1. P-TERM (Angle)
-                double p_term = (angle_error > 0) ? (angle_error * STEERING_P_RIGHT) : (angle_error * STEERING_P_LEFT);
-
-                // 2. D-TERM (Damper based on error rate of change)
-                double raw_derivative = angle_error - previous_angle_error;
-                double filtered_derivative = (DERIVATIVE_ALPHA * raw_derivative) +
-                                             ((1.0 - DERIVATIVE_ALPHA) * previous_filtered_derivative);
-                previous_filtered_derivative = filtered_derivative;
-
-                double d_term = filtered_derivative * STEERING_D;
-
-                // Save state for next frame
-                previous_angle_error = angle_error;
-
-
-                // 3. THE TOTAL COMBINATION (F = P + D)
-                final_steering = p_term + d_term;
-
-//                PRINTF("Error: %.2f | P: %.2f | D: %.2f | TOTAL: %.2f\r\n",
-//                        angle_error, p_term, d_term, final_steering);
-
-            } else {
-                // LOST LINE LOGIC
-                final_steering = 0.0;
-                previous_angle_error = 0.0;
-                previous_filtered_derivative = 0.0;
-                integral_x = 0.0; // Reset outer loop integral to prevent windup off-track
-//                PRINTF(">>> LOST LINE: Straight\r\n");
+                // RESTORED PID SUMMARY //PRINT
+                //PRINTF("PID | PosErr: %d | Angle: %d | P: %d, I: %d, D: %d | Final Steer: %d\r\n",(int)avg_pos_err, (int)current_angle, (int)p_term, (int)i_term, (int)d_term, (int)final_steering);
             }
 
-            // Apply Limiters
             if (final_steering > STEERING_LIMIT_RIGHT) final_steering = STEERING_LIMIT_RIGHT;
-            if (final_steering < STEERING_LIMIT_LEFT) final_steering = STEERING_LIMIT_LEFT;
+            if (final_steering < STEERING_LIMIT_LEFT)  final_steering = STEERING_LIMIT_LEFT;
 
-            // Actuate Servo
             Steer(final_steering + STEERING_OFFSET);
         }
 
-        // ==========================================
-		// 4. CHECK THE TIMER BEFORE POWERING MOTORS
-		// ==========================================
-		if (g_ms_timer < 5000) {
-			// Keep driving
-			HbridgeSpeed(&g_hbridge, SPEED_LEFT, SPEED_RIGHT);
-		} else {
-			// 5 Seconds have passed: Kill motors and center steering
-			HbridgeSpeed(&g_hbridge, 0, 0);
-			Steer(STEERING_OFFSET);
-		}
+        // --- SPEED CONTROL & OBSTACLE STOP ---
+        if (distance_cm < OBSTACLE_THRESHOLD_CM) {
+            HbridgeSpeed(&g_hbridge, 0, 0);
+        } else if (is_slow_mode) {
+            HbridgeSpeed(&g_hbridge, SLOW_SPEED_LEFT, SLOW_SPEED_RIGHT);
+            Steer(STEERING_OFFSET);
+        } else {
+            HbridgeSpeed(&g_hbridge, current_drive_speed, -current_drive_speed);
+        }
+        //PRINTF("SLOW MODE: %s\r\n", is_slow_mode ? "YES" : "NO");
     }
 }
-

@@ -115,7 +115,8 @@ source/main.o source/main.d: ../source/main.c \
  C:\Users\Alyss\NXP_CUP\NXP_CUP\Tmp\nxpcup\include/pixy.h \
  C:\Users\Alyss\NXP_CUP\NXP_CUP\Tmp\nxpcup\include/Config.h \
  C:\Users\Alyss\NXP_CUP\NXP_CUP\Tmp\nxpcup\include/servo.h \
- C:\Users\Alyss\NXP_CUP\NXP_CUP\Tmp\nxpcup\include/esc.h
+ C:\Users\Alyss\NXP_CUP\NXP_CUP\Tmp\nxpcup\include/esc.h \
+ ../source/calibration.h
 C:\Users\Alyss\NXP_CUP\NXP_CUP\Tmp\nxpcup\source\mcux_config.h:
 C:\Users\Alyss\NXP_CUP\NXP_CUP\Tmp\nxpcup\device/fsl_device_registers.h:
 C:\Users\Alyss\NXP_CUP\NXP_CUP\Tmp\nxpcup\device/MCXN947_cm33_core0.h:
@@ -233,3 +234,4 @@ C:\Users\Alyss\NXP_CUP\NXP_CUP\Tmp\nxpcup\include/pixy.h:
 C:\Users\Alyss\NXP_CUP\NXP_CUP\Tmp\nxpcup\include/Config.h:
 C:\Users\Alyss\NXP_CUP\NXP_CUP\Tmp\nxpcup\include/servo.h:
 C:\Users\Alyss\NXP_CUP\NXP_CUP\Tmp\nxpcup\include/esc.h:
+../source/calibration.h:

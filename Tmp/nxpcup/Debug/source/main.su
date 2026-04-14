@@ -1,3 +1,9 @@
-../source/main.c:29:6:SysTick_Handler	4	static
-../source/main.c:37:6:CalibrateTrack	208	static
-../source/main.c:103:5:main	528	static
+C:\Users\Alyss\NXP_CUP\NXP_CUP\Tmp\nxpcup\CMSIS/core_cm33.h:2555:22:__NVIC_SetPriority	16	static
+C:\Users\Alyss\NXP_CUP\NXP_CUP\Tmp\nxpcup\CMSIS/core_cm33.h:3108:26:SysTick_Config	16	static
+../source/main.c:30:6:SysTick_Handler	4	static
+../source/main.c:35:13:DWT_Init	4	static
+../source/main.c:41:13:delay_us	24	static
+../source/main.c:47:17:micros_now	4	static
+../source/main.c:51:13:HC_SR04_InitPins	4	static
+../source/main.c:61:13:HC_SR04_ReadDistanceCm	32	static
+../source/main.c:82:5:main	384	static
